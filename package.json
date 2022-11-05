@@ -1,0 +1,22 @@
+{
+  "name": "duncanbh.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuncanBH/duncanbh.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuncanBH/duncanbh.github.io/issues"
+  },
+  "homepage": "https://github.com/DuncanBH/duncanbh.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
