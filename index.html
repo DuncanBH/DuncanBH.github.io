@@ -27,6 +27,40 @@
             </div>
         </div>
 
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-item">
+                    <!-- Button trigger resume modal -->
+                    <button type="button" class="btn btn-offwhite border border-dark-purple text-dark" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                        Resume
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Resume modal -->
+        <div class="modal modal-lg fade" id="resumeModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark-purple">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="resumeModalLabel">Resume</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <iframe src="documents/DuncanBruensHomeWebResume.pdf" type="application/pdf" width="100%" height="700px"></iframe>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-primary rounded-pill" href="./documents/DuncanBruensHomeWebResume.pdf">
+                            Download
+                        </a>
+                        <button type="button" class="btn btn-success rounded-pill" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row py-2">
             <h2 class="col text-center">My Work</h2>
         </div>
@@ -105,7 +139,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -122,4 +155,5 @@
     let year = d.getFullYear();
     document.getElementById("year").innerHTML = year;
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
