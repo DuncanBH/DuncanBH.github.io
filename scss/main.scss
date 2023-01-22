@@ -15,6 +15,10 @@ $custom-colors: (
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+.modal {
+  height: 90vh;
+}
+
 //Apply to main bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
