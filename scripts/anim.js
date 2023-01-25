@@ -3,10 +3,14 @@ const observer = new IntersectionObserver(entries => {
         // console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
+
+            setTimeout(() => {
+                entry.target.classList.add("cardHover");
+            }, 1000)
         }
-        else {
-            entry.target.classList.remove("show");
-        }
+        // else {
+        //     entry.target.classList.remove("show");
+        // }
     });
 });
 

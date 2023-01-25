@@ -11384,7 +11384,7 @@ textarea.form-control-lg {
   box-shadow: 0 0 10px var(--bs-light-purple);
 }
 
-.card.show:hover {
+.cardHover:hover {
   transform: scale(1.05);
   background-color: rgba(var(--bs-dark-purple-rgb), 0.52) !important;
 }
