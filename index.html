@@ -13,130 +13,154 @@
 <body class="bg-background text-light">
     <div class="container-fluid">
 
-        <div id="about-me" class="row bg-dark-purple text-offwhite border-light-purple border-bottom" style="height: 100vh">
+        <div id="about-me" class="row bg-dark-purple text-offwhite border-light-purple border-bottom" style="height: 100vh; position: relative;">
             <div class="col-xl-6 container mt-2 p-2 flex-column align-self-center">
-                <h1 class="text-center">Duncan Bruens-Home</h1>
                 <div class="row justify-content-center mx-0 p-3">
                     <div class="col-sm-4 col-md-5 col-xl-5">
                         <img id="me-picture" class="img-fluid rounded-circle border border-light-purple" src="./images/me.jpg" alt="A nice picture of me" />
                     </div>
-                    <div class="col-sm-6 align-self-center">
-                        <h2 class="">About me:</h2>
-                        <p>
+                    <h1 class="text-center">Duncan Bruens-Home</h1>
+                    <div class="col-sm-12 align-self-center">
+                        <p class="text-center">
                             Full time nerd, always on the look out for interesting things.
                         </p>
                     </div>
                 </div>
+
+                <div class="text-center" id="downArrow">
+                    <a href="#my-work" style="width: 50%">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 15%" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="container">
-            <nav class="nav">
+    <!-- Resume modal -->
+    <div class="modal modal-lg fade" id="resumeModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark-purple">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="resumeModalLabel">Resume</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body" style="height: 72vh">
+                    <iframe src="documents/DuncanBruensHomeWebResume.pdf" type="application/pdf" width="100%" height="100%"></iframe>
+                </div>
+
+                <div class="modal-footer">
+                    <a class="btn btn-primary rounded-pill" href="./documents/DuncanBruensHomeWebResume.pdf">
+                        Download
+                    </a>
+                    <button type="button" class="btn btn-success rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar sticky-top bg-dark-purple">
+        <div class="container-fluid">
+            <a class="navbar-brand text-offwhite " href="#">
+                Duncan Bruens-Home
+            </a>
+
+            <div class="ms-auto d-flex">
+                <div class="nav-item w-auto">
+                    <a href="https://www.linkedin.com/in/duncanbh" class="nav-link">
+                        <svg style="width: 10%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                    </a>
+                </div>
+
                 <div class="nav-item">
                     <!-- Button trigger resume modal -->
                     <button type="button" class="btn btn-offwhite border border-dark-purple text-dark" data-bs-toggle="modal" data-bs-target="#resumeModal">
                         Resume
                     </button>
                 </div>
-            </nav>
-        </div>
-
-        <!-- Resume modal -->
-        <div class="modal modal-lg fade" id="resumeModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark-purple">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="resumeModalLabel">Resume</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <div class="modal-body" style="height: 72vh">
-                        <iframe src="documents/DuncanBruensHomeWebResume.pdf" type="application/pdf" width="100%" height="100%"></iframe>
-                    </div>
-
-                    <div class="modal-footer">
-                        <a class="btn btn-primary rounded-pill" href="./documents/DuncanBruensHomeWebResume.pdf">
-                            Download
-                        </a>
-                        <button type="button" class="btn btn-success rounded-pill" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
             </div>
         </div>
+    </nav>
 
+    <!--Main Body of Page-->
+    <div class="container-fluid">
         <div class="row pb-2 pt-5">
             <h2 class="col text-center" id="my-work">My Work</h2>
-        </div>
-        <div class="container-fluid container-lg">
-            <div class="row text-dark">
-                <div class="col-md-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="https://frunnkis.itch.io/ruins-of-dice">
-                            <img class="card-img-top border-bottom border-dark-purple" src="https://img.itch.zone/aW1nLzk0ODUyNjUucG5n/315x250%23c/80QDfx.png" alt="" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">
-                                Ruins of Dice
-                            </h5>
-                            <p>
-                                This game was created as my entry into the 2022 GMTK game jam in less than 48 hours. It was well received, scoring in the top 35% of over 6000 participants.
-                                It was a unique experience, working under such tight constraints with little to no outside help save for my friend and talented animator, <i>MrHayami</i>.
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a class="btn btn-success rounded-pill" href="https://frunnkis.itch.io/ruins-of-dice">
-                                    Play Now!
-                                </a>
-                                <a class="btn btn-secondary rounded-pill" href="#">
-                                    GitHub
-                                </a>
+            <div class="container-fluid container-lg">
+                <div class="row text-dark">
+                    <div class="col-md-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="https://frunnkis.itch.io/ruins-of-dice">
+                                <img class="card-img-top border-bottom border-dark-purple" src="https://img.itch.zone/aW1nLzk0ODUyNjUucG5n/315x250%23c/80QDfx.png" alt="" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">
+                                    Ruins of Dice
+                                </h5>
+                                <p>
+                                    This game was created as my entry into the 2022 GMTK game jam in less than 48 hours. It was well received, scoring in the top 35% of over 6000 participants.
+                                    It was a unique experience, working under such tight constraints with little to no outside help save for my friend and talented animator, <i>MrHayami</i>.
+                                </p>
+                                <div class="text-center mt-auto">
+                                    <a class="btn btn-success rounded-pill" href="https://frunnkis.itch.io/ruins-of-dice">
+                                        Play Now!
+                                    </a>
+                                    <a class="btn btn-secondary rounded-pill" href="#">
+                                        GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md col-lg-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="#">
-                            <img class="card-img-top border-bottom border-dark-purple" src="images/SamuraiCover.png" alt="The Second Unnamed Samurai" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">
-                                The Second Unnamed Samurai
-                            </h5>
-                            <p>
-                                This project was created by a small team, as our final for our introductory Unity class at Champlain College.
-                                Our team was composed of 2 main developers, including myself and <a class="link-offwhite" href="https://dufourmax1738.github.io/">Maxime Dufour</a>, our main composer Nicolas Robert and artist <i>MrHayami</i>.
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a class="btn btn-secondary rounded-pill" href="#">
-                                    Coming Soon!
-                                </a>
-                                <a class="btn btn-blue text-light rounded-pill" href="https://github.com/DuncanBH/FinalPlatformerProject">
-                                    GitHub
-                                </a>
+                    <div class="col-md col-lg-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="#">
+                                <img class="card-img-top border-bottom border-dark-purple" src="images/SamuraiCover.png" alt="The Second Unnamed Samurai" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">
+                                    The Second Unnamed Samurai
+                                </h5>
+                                <p>
+                                    This project was created by a small team, as our final for our introductory Unity class at Champlain College.
+                                    Our team was composed of 2 main developers, including myself and <a class="link-offwhite" href="https://dufourmax1738.github.io/">Maxime Dufour</a>, our main composer Nicolas Robert and artist <i>MrHayami</i>.
+                                </p>
+                                <div class="text-center mt-auto">
+                                    <a class="btn btn-secondary rounded-pill" href="#">
+                                        Coming Soon!
+                                    </a>
+                                    <a class="btn btn-blue text-light rounded-pill" href="https://github.com/DuncanBH/FinalPlatformerProject">
+                                        GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md col-lg-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="https://github.com/istiaque-champ/champ_petclinic">
-                            <img class="card-img-top border-bottom border-dark-purple" src="images/Petclinic.png" alt="The Second Unnamed Samurai" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">
-                                Champlain "PetClinic" Project
-                            </h5>
-                            <p>
-                                The PetClinic project was my first exposure to real-life agile development, using SCRUM.
-                                Working in a small team, in conjunction with numerous others, to upgrade and oftentimes
-                                repair a complex microservice application provided a great way to experience real development work.
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a class="btn btn-blue text-light rounded-pill" style="object-fit: cover" href="https://github.com/istiaque-champ/champ_petclinic">
-                                    GitHub
-                                </a>
+                    <div class="col-md col-lg-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="https://github.com/istiaque-champ/champ_petclinic">
+                                <img class="card-img-top border-bottom border-dark-purple" src="images/Petclinic.png" alt="The Second Unnamed Samurai" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">
+                                    Champlain "PetClinic" Project
+                                </h5>
+                                <p>
+                                    The PetClinic project was my first exposure to real-life agile development, using SCRUM.
+                                    Working in a small team, in conjunction with numerous others, to upgrade and oftentimes
+                                    repair a complex microservice application provided a great way to experience real development work.
+                                </p>
+                                <div class="text-center mt-auto">
+                                    <a class="btn btn-blue text-light rounded-pill" style="object-fit: cover" href="https://github.com/istiaque-champ/champ_petclinic">
+                                        GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,54 +170,55 @@
 
         <div class="row pb-2 pt-5">
             <h2 class="col text-center">Other Interests</h2>
-        </div>
-        <div class="container-fluid container-lg">
-            <div class="row text-dark">
-                <div class="col-md-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="https://frunnkis.itch.io/ruins-of-dice">
-                            <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-auto">
-                                Champlain Gaming Club
-                            </h5>
-                            <p>
-                                While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games.
-                                Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
-                            </p>
+
+            <div class="container-fluid container-lg">
+                <div class="row text-dark">
+                    <div class="col-md-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="#">
+                                <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center mb-auto">
+                                    Champlain Gaming Club
+                                </h5>
+                                <p>
+                                    While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games.
+                                    Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md col-lg-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="#">
-                            <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="The Second Unnamed Samurai" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-auto">
-                                Placeholder
-                            </h5>
-                            <p>
-                                While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games. Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
-                            </p>
+                    <div class="col-md col-lg-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="#">
+                                <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="The Second Unnamed Samurai" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center mb-auto">
+                                    Placeholder
+                                </h5>
+                                <p>
+                                    While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games. Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md col-lg-4 d-flex mb-2 mt-2">
-                    <div class="card bg-transparent text-white border border-dark-purple hidden">
-                        <a href="https://github.com/istiaque-champ/champ_petclinic">
-                            <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="The Second Unnamed Samurai" />
-                        </a>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-auto">
-                                Placeholder
-                            </h5>
-                            <p>
-                                While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games. Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
-                            </p>
+                    <div class="col-md col-lg-4 d-flex mb-2 mt-2">
+                        <div class="card bg-transparent text-white border border-dark-purple hidden">
+                            <a href="">
+                                <img class="card-img-top border-bottom border-dark-purple" src="https://static.wikia.nocookie.net/supermarioglitchy4/images/5/59/Beeg_Yoshi.png" alt="The Second Unnamed Samurai" />
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center mb-auto">
+                                    Placeholder
+                                </h5>
+                                <p>
+                                    While I studied at Champlain College, I was lucky enough to find a wonderful and unique community of passionate people sharing my interest and love for video games. Over the years, I had the opportunity to take on multiple roles: Activities Coordinator, then Treasurer and finally President.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,8 +227,7 @@
 
         <div class="row pb-2 pt-5">
             <h2 class="col text-center">My Skills</h2>
-        </div>
-        <div class="row">
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col mb-2 mt-2 d-flex">

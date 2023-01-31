@@ -11400,4 +11400,33 @@ textarea.form-control-lg {
   color: white;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+#downArrow {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translate(-50%);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+#downArrow:hover {
+  animation-play-state: paused;
+}
+
+#downArrow > a > svg:hover {
+  transition: all ease-in-out 0.25s;
+  transform: translate(0, 2vh);
+  fill: white;
+}
+
 /*# sourceMappingURL=main.css.map */
