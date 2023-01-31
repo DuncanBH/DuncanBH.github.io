@@ -82,3 +82,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform: translate(0, 2vh);
   fill: white;
 }
+
+.nav-item>a>svg {
+  fill: #e0dae1;
+}

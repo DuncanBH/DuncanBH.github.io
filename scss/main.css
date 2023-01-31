@@ -11429,4 +11429,8 @@ textarea.form-control-lg {
   fill: white;
 }
 
+.nav-item > a > svg {
+  fill: #e0dae1;
+}
+
 /*# sourceMappingURL=main.css.map */
