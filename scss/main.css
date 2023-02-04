@@ -11402,13 +11402,13 @@ textarea.form-control-lg {
 
 @keyframes bounce {
   0% {
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
   }
   50% {
-    transform: translate(-50%, -10px);
+    transform: translate(0, -10px);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
   }
 }
 #downArrow {
@@ -11416,17 +11416,19 @@ textarea.form-control-lg {
   bottom: 3vh;
   left: 50%;
   transform: translate(-50%);
+}
+
+#downArrow > a > svg {
   animation: bounce 2s ease-in-out infinite;
 }
 
-#downArrow:hover {
+#downArrow > a:hover {
   animation-play-state: paused;
+  color: #9a87b4 !important;
 }
 
-#downArrow > a > svg:hover {
-  transition: all ease-in-out 0.25s;
-  transform: translate(0, 2vh);
-  fill: white;
+#downArrow:hover > a > svg {
+  fill: #9a87b4;
 }
 
 .nav-item > a > svg {

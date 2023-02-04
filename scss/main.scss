@@ -55,34 +55,36 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @keyframes bounce {
   0% {
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
   }
   50% {
-    transform: translate(-50%, -10px);
+    transform: translate(0, -10px);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
   }
 }
 
 #downArrow {
-  position:absolute;
+  position: absolute;
   bottom: 3vh;
   left: 50%;
   transform: translate(-50%);
+}
+
+#downArrow > a > svg {
   animation: bounce 2s ease-in-out infinite;
 }
 
-#downArrow:hover {
+#downArrow > a:hover {
   animation-play-state: paused;
+  color: map-get($custom-colors, "light-purple") !important;
 }
 
-#downArrow>a>svg:hover {
-  transition: all ease-in-out 0.25s;
-  transform: translate(0, 2vh);
-  fill: white;
+#downArrow:hover > a > svg {
+  fill: map-get($custom-colors, "light-purple");
 }
 
-.nav-item>a>svg {
+.nav-item > a > svg {
   fill: #e0dae1;
 }
