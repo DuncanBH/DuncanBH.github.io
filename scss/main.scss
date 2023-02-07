@@ -107,6 +107,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   fill: #e0dae1;
 }
 
+.chip {
+  transition: 0.3s;
+}
+
 .chip:hover {
   background-color: map-get($custom-colors, 'light-purple');
 

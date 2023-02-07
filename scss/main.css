@@ -11442,6 +11442,10 @@ textarea.form-control-lg {
   fill: #e0dae1;
 }
 
+.chip {
+  transition: 0.3s;
+}
+
 .chip:hover {
   background-color: #9a87b4;
 }
