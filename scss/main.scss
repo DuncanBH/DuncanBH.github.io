@@ -41,7 +41,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   box-shadow: 0 0 15px var(--bs-light-purple);
 }
 
-#about-me {
+#landing {
   background-image: linear-gradient(
                   to bottom,
                   rgba(var(--bs-dark-rgb), 0.52),
@@ -51,6 +51,24 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+}
+
+#about-me {
+  background-image:
+        //        linear-gradient(
+        //                to bottom,
+        //                rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity)),
+        //                rgba(var(--bs-dark-rgb), 0.52)
+        //),
+        url("/images/space.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  //color: white;
+}
+
+#hatPic {
+  //box-shadow: 0 0 10px var(--bs-light-purple);
 }
 
 @keyframes bounce {
@@ -87,4 +105,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .nav-item > a > svg {
   fill: #e0dae1;
+}
+
+.chip:hover {
+  background-color: map-get($custom-colors, 'light-purple');
+
 }
