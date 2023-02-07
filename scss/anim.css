@@ -1,9 +1,9 @@
-body > div.container-fluid {
-  scroll-snap-type: y mandatory;
+html {
+  scroll-behavior: smooth;
 }
 
-body > div.container-fluid > div.row {
-  scroll-snap-align: start;
+.scroll-spacer {
+  scroll-margin-top: 56px;
 }
 
 .hidden {

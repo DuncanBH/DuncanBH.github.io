@@ -79,9 +79,10 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg sticky-top bg-dark-purple" id="main">
+    <div id="main"></div>
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark-purple">
         <div class="container-fluid">
-            <a class="navbar-brand text-offwhite" href="#">
+            <a class="navbar-brand text-offwhite" href="#main">
                 Duncan Bruens-Home
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,6 +90,15 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
+                <a href="#skills" class="text-decoration-none text-offwhite mx-2">
+                    Skills
+                </a>
+                <a href="#my-work" class="text-decoration-none text-offwhite mx-2">
+                    Work
+                </a>
+                <a href="#other" class="text-decoration-none text-offwhite mx-2">
+                    Other
+                </a>
 
                 <div class="nav-item px-2 ms-auto">
                     <a class="text-decoration-none text-offwhite" href="https://github.com/duncanbh">
@@ -167,7 +177,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row text-center my-2">
+        <div class="row text-center my-2 pt-2 scroll-spacer" id="skills">
             <h3>
                 Programming Languages
             </h3>
@@ -221,7 +231,7 @@
 
     <div class="container-fluid">
 
-        <div class="row pb-2 pt-3">
+        <div class="row pb-2 pt-3 scroll-spacer" id="my-work">
             <h2 class="col text-center">My Work</h2>
             <div class="container-fluid container-lg">
                 <div class="row text-dark">
@@ -301,7 +311,7 @@
             </div>
         </div>
 
-        <div class="row pb-2 pt-3">
+        <div class="row pb-2 pt-3 scroll-spacer" id="other">
             <h2 class="col text-center">Other Interests</h2>
 
             <div class="container-fluid container-lg">
