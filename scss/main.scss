@@ -22,6 +22,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 //Apply to main bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.navbar-bg {
+  backdrop-filter: blur(5px);
+  background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
+}
+
 .card {
   border-radius: 4px;
   background: #fff;
@@ -54,13 +59,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 #about-me {
-  background-image:
-        //        linear-gradient(
-        //                to bottom,
-        //                rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity)),
-        //                rgba(var(--bs-dark-rgb), 0.52)
-        //),
-        url("/images/space.jpg");
+  background-image: //        linear-gradient(
+          //                to bottom,
+          //                rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity)),
+          //                rgba(var(--bs-dark-rgb), 0.52)
+          //),
+          url("/images/space.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -113,5 +117,4 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .chip:hover {
   background-color: map-get($custom-colors, 'light-purple');
-
 }
