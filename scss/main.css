@@ -11380,15 +11380,32 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
 }
 
-.card {
+.grid-container {
+  columns: 350px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.grid-container > * {
+  max-height: min-content;
+  display: inline-block;
+  margin: 10px;
+}
+
+.customCard {
   border-radius: 4px;
   background: #fff;
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   box-shadow: 0 0 10px var(--bs-light-purple);
 }
+.customCard > * > h5, .customCard > * > .h5 {
+  margin: 5px;
+}
+.customCard > * > p {
+  padding: 1%;
+  margin: 0;
+}
 
-.cardHover:hover {
-  transform: scale(1.05);
+.customCard:hover {
   background-color: rgba(var(--bs-dark-purple-rgb), 0.52) !important;
 }
 
@@ -11408,6 +11425,7 @@ textarea.form-control-lg {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  min-height: 95vh;
 }
 
 @keyframes bounce {
