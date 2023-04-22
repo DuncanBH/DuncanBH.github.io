@@ -24,6 +24,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .navbar-bg {
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
 }
 
