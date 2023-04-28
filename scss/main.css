@@ -11380,6 +11380,9 @@ textarea.form-control-lg {
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
 }
+.navbar-bg > * {
+  max-width: 1440px;
+}
 
 .grid-container {
   columns: 350px;
@@ -11392,21 +11395,28 @@ textarea.form-control-lg {
   margin: 10px;
 }
 
-.customCard {
-  border-radius: 4px;
+.custom-card {
+  border-radius: 15px;
   background: #fff;
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   box-shadow: 0 0 10px var(--bs-light-purple);
 }
-.customCard > * > h5, .customCard > * > .h5 {
+.custom-card > * > img {
+  border-radius: 15px 15px 0 0;
+}
+.custom-card > .custom-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5% 10px;
+}
+.custom-card > .custom-card-body > h5, .custom-card > .custom-card-body > .h5 {
   margin: 5px;
 }
-.customCard > * > p {
-  padding: 1%;
-  margin: 0;
+.custom-card > .custom-card-body > p {
+  margin: 0 0 10px;
 }
 
-.customCard:hover {
+.custom-card:hover {
   background-color: rgba(var(--bs-dark-purple-rgb), 0.52) !important;
 }
 
@@ -11421,12 +11431,15 @@ textarea.form-control-lg {
   color: white;
 }
 
-#about-me {
+.about-me {
   background-image: url("/images/space.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 95vh;
+}
+.about-me > * {
+  max-width: 1440px;
 }
 
 @keyframes bounce {
@@ -11470,6 +11483,10 @@ textarea.form-control-lg {
 
 .chip:hover {
   background-color: #9a87b4;
+}
+
+.limiter {
+  max-width: 1440px;
 }
 
 /*# sourceMappingURL=main.css.map */

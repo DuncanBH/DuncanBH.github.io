@@ -26,6 +26,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
+
+  > * {
+    max-width: 1440px;
+  }
 }
 
 .grid-container {
@@ -40,8 +44,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   }
 }
 
-.customCard {
-  border-radius: 4px;
+.custom-card {
+  border-radius: 15px;
   background: #fff;
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
   0.3s box-shadow,
@@ -49,18 +53,25 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   //cursor: default;
   box-shadow: 0 0 10px var(--bs-light-purple);
 
-  > * {
+  > * > img {
+    border-radius: 15px 15px 0 0;
+  }
+  > .custom-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5% 10px;
+
     > h5 {
       margin: 5px;
     }
+
     > p {
-      padding: 1%;
-      margin: 0;
+      margin: 0 0 10px;
     }
   }
 }
 
-.customCard:hover {
+.custom-card:hover {
   background-color: rgba(var(--bs-dark-purple-rgb), 0.52) !important;
 }
 
@@ -80,17 +91,16 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   color: white;
 }
 
-#about-me {
-  background-image: //        linear-gradient(
-          //                to bottom,
-          //                rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity)),
-          //                rgba(var(--bs-dark-rgb), 0.52)
-          //),
-          url("/images/space.jpg");
+.about-me {
+  background-image: url("/images/space.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 95vh
+  min-height: 95vh;
+
+  > * {
+    max-width: 1440px;
+  }
 }
 
 #hatPic {
@@ -139,4 +149,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .chip:hover {
   background-color: map-get($custom-colors, 'light-purple');
+}
+
+.limiter {
+  max-width: 1440px;
 }

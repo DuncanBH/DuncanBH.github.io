@@ -165,44 +165,46 @@
 </nav>
 
 <!--Main Body of Page-->
-<div class="container-fluid border-light-purple border-bottom" id="about-me">
-    <div class="row pb-2 pt-5 mx-lg-5">
+<div class="about-me border-light-purple border-bottom">
+    <div class="container-fluid">
+        <div class="row pb-2 pt-5 mx-lg-5">
 
-        <div class="col-12 col-lg-6">
-            <div class="bg-dark-purple px-4 py-3 rounded-3" style="--bs-bg-opacity: .93; font-size:125%">
-                <h2 class="text-center">Hey there!</h2>
-                My name is Duncan Bruens-Home, and I am:
-                <ul>
-                    <li>A Programmer</li>
-                    <li>A Gamer</li>
-                    <li>Victim of way too many Dunkin' Donuts jokes</li>
-                </ul>
+            <div class="col-12 col-lg-6">
+                <div class="bg-dark-purple px-4 py-3 rounded-3" style="--bs-bg-opacity: .93; font-size:125%">
+                    <h2 class="text-center">Hey there!</h2>
+                    My name is Duncan Bruens-Home, and I am:
+                    <ul>
+                        <li>A Programmer</li>
+                        <li>A Gamer</li>
+                        <li>Victim of way too many Dunkin' Donuts jokes</li>
+                    </ul>
 
-                <p>
-                    I am a graduating computer science student at Champlain College Saint-Lambert.
-                    I picked up programming in high school for my robotics club, and ever since then I've been
-                    enthralled.
-                    Since then, through my schooling and personal projects, I have had the opportunity to experiment
-                    with many different languages, frameworks and mediums.
-                </p>
+                    <p>
+                        I am a graduating computer science student at Champlain College Saint-Lambert.
+                        I picked up programming in high school for my robotics club, and ever since then I've been
+                        enthralled.
+                        Since then, through my schooling and personal projects, I have had the opportunity to experiment
+                        with many different languages, frameworks and mediums.
+                    </p>
 
-                <p>My favorite by far has been game development, and it's what I hope to pursue soon!</p>
+                    <p>My favorite by far has been game development, and it's what I hope to pursue soon!</p>
 
-                <p>I'm interested in all aspects of computers, mathematics, science and more, though programming is
-                    without a doubt my specialty</p>
+                    <p>I'm interested in all aspects of computers, mathematics, science and more, though programming is
+                        without a doubt my specialty</p>
 
+                </div>
+            </div>
+
+            <div class="col-6 text-center d-none d-lg-block">
+                <img class="img-fluid rounded-3 border border-light-purple" style="max-height: 80vh" id="hatPic"
+                     src="images/Hat.jpg" alt="Me with a funny christmas hat">
             </div>
         </div>
 
-        <div class="col-6 text-center d-none d-lg-block">
-            <img class="img-fluid rounded-3 border border-light-purple" style="max-height: 80vh" id="hatPic"
-                 src="images/Hat.jpg" alt="Me with a funny christmas hat">
-        </div>
     </div>
-
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid limiter">
     <div class="row text-center my-2 pt-2 scroll-spacer" id="skills">
         <h3>
             Programming Languages
@@ -264,21 +266,20 @@
     </div>
 </div>
 
-<div class="">
-
+<div>
     <div class="scroll-spacer" id="my-work">
         <h2 class="text-center">My Work</h2>
         <div class="">
             <div class="text-dark grid-container">
 
-                <div class="customCard bg-transparent text-white border border-dark-purple hidden">
+                <div class="custom-card bg-transparent text-white border border-dark-purple hidden">
                     <a href="https://en.zelexio.com/">
                         <img class="card-img-top border-bottom border-dark-purple bg-black"
                              src="./images/Zelexio.png"
                              alt="Zelexio"
                         />
                     </a>
-                    <div class="flex-column">
+                    <div class="custom-card-body">
                         <h5 class="card-title text-center">
                             Zelexio
                         </h5>
@@ -296,14 +297,14 @@
                 </div>
 
 
-                <div class="customCard bg-transparent text-white border border-dark-purple hidden">
+                <div class="custom-card bg-transparent text-white border border-dark-purple hidden">
                     <a href="https://okkoro.vercel.app/">
                         <img class="card-img-top border-bottom border-dark-purple bg-black"
                              src="https://okkoro.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fokkoro.2f288b40.png&w=384&q=75"
                              alt="Okkoro"
                         />
                     </a>
-                    <div class="flex-column">
+                    <div class="custom-card-body">
                         <h5 class="card-title text-center">
                             OKKORO
                         </h5>
@@ -324,13 +325,13 @@
                 </div>
 
 
-                <div class="customCard bg-transparent text-white border border-dark-purple hidden">
+                <div class="custom-card bg-transparent text-white border border-dark-purple hidden">
                     <a href="https://frunnkis.itch.io/ruins-of-dice">
                         <img class="card-img-top border-bottom border-dark-purple"
                              src="https://img.itch.zone/aW1nLzk0ODUyNjUucG5n/315x250%23c/80QDfx.png"
                              alt="Ruins of Dice"/>
                     </a>
-                    <div class="flex-column">
+                    <div class="custom-card-body">
                         <h5 class="card-title text-center">
                             Ruins of Dice
                         </h5>
@@ -349,12 +350,12 @@
                 </div>
 
 
-                <div class="customCard bg-transparent text-white border border-dark-purple hidden">
+                <div class="custom-card bg-transparent text-white border border-dark-purple hidden">
                     <a href="https://github.com/DuncanBH/FinalPlatformerProject">
                         <img class="card-img-top border-bottom border-dark-purple" src="images/SamuraiCover.png"
                              alt="The Second Unnamed Samurai"/>
                     </a>
-                    <div class="flex-column">
+                    <div class="custom-card-body">
                         <h5 class="card-title text-center">
                             The Second Unnamed Samurai
                         </h5>
@@ -375,12 +376,12 @@
                 </div>
 
 
-                <div class="customCard bg-transparent text-white border border-dark-purple hidden">
+                <div class="custom-card bg-transparent text-white border border-dark-purple hidden">
                     <a href="https://github.com/istiaque-champ/champ_petclinic">
                         <img class="card-img-top border-bottom border-dark-purple" src="images/Petclinic.png"
                              alt="Petclinic Project"/>
                     </a>
-                    <div class="flex-column">
+                    <div class="custom-card-body">
                         <h5 class="card-title text-center">
                             Champlain "PetClinic" Project
                         </h5>
@@ -404,7 +405,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid limiter">
         <div class="row pb-2 pt-3 scroll-spacer" id="other">
             <h2 class="col text-center">Other Interests</h2>
 
