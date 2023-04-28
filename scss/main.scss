@@ -85,14 +85,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
                   rgba(var(--bs-dark-rgb), 0.52),
                   rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity))
   ),
-  url("/images/comp.jpg");
+  url("/images/comp.webp");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
 }
 
 .about-me {
-  background-image: url("/images/space.jpg");
+  background-image: url("/images/space.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
