@@ -11479,6 +11479,7 @@ textarea.form-control-lg {
 
 .chip {
   transition: 0.3s;
+  background-color: #7a5993;
 }
 
 .chip:hover {
