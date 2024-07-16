@@ -69,12 +69,43 @@ body {
   align-items: center;
   text-align: center;
 }
+#landing .landing-content h1 {
+  font-size: 2.5em;
+}
+#landing .landing-content p {
+  font-size: 1.1em;
+}
 #landing img {
   max-width: min(50%, 450px);
   margin: 5px;
   border-radius: 50%;
   border: solid 1px #9a87b4;
   box-shadow: 0 0 15px #9a87b4;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+#downArrow {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+#downArrow a {
+  font-size: 1.5rem;
+  color: rgb(33, 37, 41);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal {
@@ -140,24 +171,6 @@ body {
 }
 .about-me > * {
   max-width: 1440px;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, -10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-#downArrow {
-  position: absolute;
-  bottom: 3vh;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 #downArrow > a > svg {
