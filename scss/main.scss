@@ -1,26 +1,88 @@
 //Import needed parts
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "reset";
 
 //create custom styles
+$title: #d90556;
+$blue: #3F8EFC;
+$background: #483a55;
+$offwhite: #e0dae1;
+$light-purple: #9a87b4;
+$dark-purple: #7a5993;
+$yellow: #f5d18d;
+
+//Bootstrapish colors
+$light: #f8f9f;
+$dark: rgb(33, 37, 41);
+
 $custom-colors: (
-        "title":#d90556,
-        "blue": #3F8EFC,
-        "background": #483a55,
-        "offwhite": #e0dae1,
-        "light-purple": #9a87b4,
-        "dark-purple": #7a5993,
-        "yellow": #f5d18d,
+        "title": $title,
+        "blue": $blue,
+        "background": $background,
+        "offwhite": $offwhite,
+        "light-purple": $light-purple,
+        "dark-purple": $dark-purple,
+        "yellow": $yellow,
+  //Bootstrapish colors
+        "dark": $dark,
+        "light": $light,
 );
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
+// ########## De-Bootstrapping ##########
+body {
+  background-color: $background;
+  color: $light;
 
-.modal {
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-//Apply to main bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+.bg-dark-purple {
+  background: $dark-purple;
+}
+
+#landing {
+  color: $offwhite;
+  border-bottom: solid $light-purple 1px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(to bottom, rgba($dark, 0.52), $dark-purple), url("/images/comp.webp");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  img {
+    max-width: min(50%, 450px);
+
+    margin: 5px;
+
+    border-radius: 50%;
+    border: solid 1px $light-purple;
+    box-shadow: 0 0 15px $light-purple;
+  }
+}
+
+// ########## Old styles ##########
+.modal {
+  display: none; //Remove modal for now
+  height: 90vh;
+}
 
 .navbar-bg {
   backdrop-filter: blur(5px);
@@ -56,6 +118,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   > * > img {
     border-radius: 15px 15px 0 0;
   }
+
   > .custom-card-body {
     display: flex;
     flex-direction: column;
@@ -80,15 +143,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 #landing {
-  background-image: linear-gradient(
-                  to bottom,
-                  rgba(var(--bs-dark-rgb), 0.52),
-                  rgba(var(--bs-dark-purple-rgb), var(--bs-bg-opacity))
-  ),
-  url("/images/comp.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+
 }
 
 .about-me {
