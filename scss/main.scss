@@ -2,7 +2,7 @@
 @import "reset";
 
 //create custom styles
-$collapseSize: 900px;
+$collapseSize: 850px;
 
 $title: #d90556;
 $blue: #3F8EFC;
@@ -111,6 +111,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    > svg {
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    &:hover {
+      color: $light-purple;
+
+      > svg {
+        fill: $light-purple;
+      }
+    }
   }
 }
 
@@ -241,10 +253,6 @@ nav {
   box-shadow: 0 0 15px var(--bs-light-purple);
 }
 
-#landing {
-
-}
-
 .about-me {
   background-image: url("/images/space.webp");
   background-size: cover;
@@ -259,19 +267,6 @@ nav {
 
 #hatPic {
   //box-shadow: 0 0 10px var(--bs-light-purple);
-}
-
-#downArrow > a > svg {
-  animation: bounce 2s ease-in-out infinite;
-}
-
-#downArrow > a:hover {
-  animation-play-state: paused;
-  color: map-get($custom-colors, "light-purple") !important;
-}
-
-#downArrow:hover > a > svg {
-  fill: map-get($custom-colors, "light-purple");
 }
 
 .chip {
