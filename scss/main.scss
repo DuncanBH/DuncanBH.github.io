@@ -2,6 +2,8 @@
 @import "reset";
 
 //create custom styles
+$collapseSize: 900px;
+
 $title: #d90556;
 $blue: #3F8EFC;
 $background: #483a55;
@@ -11,7 +13,6 @@ $dark-purple: #7a5993;
 $yellow: #f5d18d;
 
 //Bootstrapish colors
-$light: #f8f9f;
 $dark: rgb(33, 37, 41);
 
 $custom-colors: (
@@ -24,13 +25,12 @@ $custom-colors: (
         "yellow": $yellow,
   //Bootstrapish colors
         "dark": $dark,
-        "light": $light,
 );
 
 // ########## De-Bootstrapping ##########
 body {
   background-color: $background;
-  color: $light;
+  color: $offwhite;
 
   display: flex;
   flex-direction: column;
@@ -44,6 +44,7 @@ body {
   background: $dark-purple;
 }
 
+/* Landing */
 #landing {
   color: $offwhite;
   border-bottom: solid $light-purple 1px;
@@ -69,6 +70,7 @@ body {
     h1 {
       font-size: 2.5em;
     }
+
     p {
       font-size: 1.1em;
     }
@@ -112,20 +114,83 @@ body {
   }
 }
 
+/* Nav Bar */
+nav {
+  position: sticky;
+  top: 0;
+
+  min-height: 56px;
+
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid $light-purple;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba($dark-purple, 0.8);
+
+  .navbar-contents {
+    flex-grow: 1;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  a {
+    color: $offwhite;
+  }
+
+  .navbar-name {
+    font-size: 1.25em;
+  }
+
+  .navbar-collapse {
+    flex-grow: 1;
+
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width: $collapseSize) {
+      display: none;
+    }
+
+    svg {
+      fill: $offwhite;
+    }
+  }
+
+  .collapseButton {
+    border: 2px solid rgba($dark, 0.20);
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 5px 10px;
+
+    transition: background-color 0.35s;
+
+    &:hover {
+      background-color: $light-purple;
+    }
+  }
+}
+
+.showWhenCollapsed {
+  display: none;
+
+  @media screen and (max-width: $collapseSize) {
+    display: inline;
+  }
+}
+
+
 // ########## Old styles ##########
 .modal {
   display: none; //Remove modal for now
   height: 90vh;
-}
-
-.navbar-bg {
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  background-color: rgba(var(--bs-dark-purple-rgb), 0.8);
-
-  > * {
-    max-width: 1440px;
-  }
 }
 
 .grid-container {
@@ -207,10 +272,6 @@ body {
 
 #downArrow:hover > a > svg {
   fill: map-get($custom-colors, "light-purple");
-}
-
-.nav-item > a > svg {
-  fill: #e0dae1;
 }
 
 .chip {
