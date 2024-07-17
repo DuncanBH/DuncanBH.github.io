@@ -149,7 +149,6 @@ nav .navbar-name {
 }
 nav .navbar-contents {
   flex-grow: 1;
-  min-height: 56px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -159,20 +158,20 @@ nav .navbar-contents {
     grid-area: content;
     flex-direction: column;
   }
-}
-nav .navbar-contents.showStackedVersion {
-  display: flex !important;
-  height: auto;
-  align-items: start;
-}
-nav .navbar-contents.showStackedVersion > a {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+  nav .navbar-contents.showStackedVersion {
+    display: flex !important;
+    align-items: start;
+    padding-bottom: 10px;
+  }
+  nav .navbar-contents.showStackedVersion > a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 }
 nav .navbar-collapse {
   flex-grow: 1;
-  height: 56px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   gap: 10px;
