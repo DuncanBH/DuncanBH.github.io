@@ -185,7 +185,6 @@ nav .navbar-contents.showStackedVersion {
 }
 nav .navbar-collapse {
   flex-grow: 1;
-  min-height: 56px;
   display: flex;
   align-items: center;
   gap: 10px;

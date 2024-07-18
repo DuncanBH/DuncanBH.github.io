@@ -192,6 +192,7 @@ nav {
       justify-content: center;
       opacity: 1;
 
+      //noinspection CssInvalidAtRule
       @starting-style {
         opacity: 0;
         max-height: 0;
@@ -203,7 +204,6 @@ nav {
   .navbar-collapse {
     flex-grow: 1;
 
-    min-height: 56px;
     display: flex;
     align-items: center;
     gap: 10px;
