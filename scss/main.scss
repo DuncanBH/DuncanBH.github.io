@@ -160,7 +160,7 @@ nav {
   }
 
   .navbar-name {
-    font-size: 1.25em;
+    font-size: 1.3em;
   }
 
   .navbar-contents {
@@ -176,27 +176,55 @@ nav {
       display: flex;
       gap: 5px;
       align-items: center;
+      justify-content: center;
+
+      font-size: 1.20em;
+
+      @media screen and (max-width: $collapseSize) {
+        border-left: 4px $offwhite solid;
+        padding-left: 10px;
+      }
+    }
+
+    .navbar-spacer {
+      font-weight: lighter;
+      flex-grow: 1;
+
+      margin-left: 10px;
+      border: none;
+
+      //@media screen and (max-width: $collapseSize) {
+      //  margin-left: 0;
+      border-bottom: 1px $light-purple solid;
+      //}
+    }
+
+    .socialLinks {
+      padding-left: 10px;
+
+      border: none;
     }
 
     @media screen and (max-width: $collapseSize) {
       grid-area: content;
       flex-direction: column;
       align-items: start;
-    }
 
-    &.showStackedVersion {
-      display: flex !important;
-      height: auto;
-      max-height: 500px;
-      align-items: start;
-      justify-content: center;
-      opacity: 1;
+      > .navbar-spacer {
+        //background: red !important;
+        width: 100%;
+      }
 
-      //noinspection CssInvalidAtRule
-      @starting-style {
-        opacity: 0;
-        max-height: 0;
-        align-items: center;
+      &.showStackedVersion {
+        max-height: 500px;
+        justify-content: center;
+        opacity: 1;
+
+        //noinspection CssInvalidAtRule
+        @starting-style {
+          opacity: 0;
+          max-height: 0;
+        }
       }
     }
   }
