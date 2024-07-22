@@ -290,12 +290,14 @@ nav .collapseButton:hover {
   box-shadow: 0 0 15px var(--bs-light-purple);
 }
 
-.about-me {
-  background-image: url("/images/space.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 95vh;
+@media screen and (min-width: 450px) {
+  .about-me {
+    background-image: url("/images/space.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 95vh;
+  }
 }
 .about-me > * {
   max-width: 1440px;
