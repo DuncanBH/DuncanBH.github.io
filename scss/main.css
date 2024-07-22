@@ -190,6 +190,7 @@ nav .navbar-contents .socialLinks {
     width: 100%;
   }
   nav .navbar-contents.showStackedVersion {
+    margin-bottom: 10px;
     max-height: 500px;
     justify-content: center;
     opacity: 1;
