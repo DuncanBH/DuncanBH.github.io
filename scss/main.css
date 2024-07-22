@@ -155,6 +155,7 @@ nav .navbar-contents {
   transition: max-height 0.75s ease, opacity 1s ease;
   overflow: hidden;
   gap: 20px;
+  max-width: 1440px;
 }
 nav .navbar-contents > a {
   display: flex;
@@ -246,6 +247,22 @@ nav .collapseButton:hover {
   }
 }
 
+@media screen and (min-width: 450px) {
+  .space-background {
+    background-image: url("/images/space.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 95vh;
+  }
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .modal {
   display: none;
   height: 90vh;
@@ -289,19 +306,6 @@ nav .collapseButton:hover {
 
 #me-picture {
   box-shadow: 0 0 15px var(--bs-light-purple);
-}
-
-@media screen and (min-width: 450px) {
-  .about-me {
-    background-image: url("/images/space.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 95vh;
-  }
-}
-.about-me > * {
-  max-width: 1440px;
 }
 
 .chip {
