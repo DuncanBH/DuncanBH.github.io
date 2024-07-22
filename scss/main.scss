@@ -276,7 +276,7 @@ nav {
   }
 }
 
-.showWhenCollapsed {
+.showWhenCollapseSizeMedium {
   display: none;
 
   @media screen and (max-width: $collapseSizeMedium) {
@@ -284,7 +284,18 @@ nav {
   }
 }
 
+.showWhenNotCollapseSizeMedium {
+  display: inherit;
+
+  @media screen and (max-width: $collapseSizeMedium) {
+    display: none;
+  }
+}
+
 .space-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (min-width: $collapseSizeSmall) {
     background-image: url("/images/space.webp");
@@ -295,10 +306,71 @@ nav {
   }
 }
 
-.about-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.main-content {
+  max-width: $maxSize;
+  padding: 20px;
+  display: grid;
+
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: $collapseSizeMedium) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > * {
+    border-radius: 15px;
+    border: 1px solid $light-purple;
+  }
+
+  .content-box {
+    &:first-of-type {
+      background: $dark-purple;
+    }
+
+    padding: 15px;
+  }
+
+  .content-img {
+    @media screen and (min-width: $maxSize) {
+      grid-row: span 3;
+    }
+  }
+}
+
+.chip-container {
+  h3 {
+    margin: -16px -16px 0 -16px;
+    padding: 10px;
+    background: $dark-purple;
+
+    text-decoration: underline;
+    border: 1px solid $light-purple;
+    border-radius: 15px 15px 0 0;
+  }
+
+  ul {
+    padding: 1rem 0 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    background-color: rgba($dark-purple, 0.95);
+
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+
+    transition: 0.3s;
+    border: 1px solid $light-purple;
+
+    &:hover {
+      background-color: $light-purple;
+    }
+  }
 }
 
 // ########## Old styles ##########
@@ -357,15 +429,6 @@ nav {
 
 #hatPic {
   //box-shadow: 0 0 10px var(--bs-light-purple);
-}
-
-.chip {
-  transition: 0.3s;
-  background-color: map-get($custom-colors, 'dark-purple');
-}
-
-.chip:hover {
-  background-color: map-get($custom-colors, 'light-purple');
 }
 
 .limiter {
