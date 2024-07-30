@@ -346,7 +346,6 @@ nav {
     padding: 10px;
     background: $dark-purple;
 
-    text-decoration: underline;
     border: 1px solid $light-purple;
     border-radius: 15px 15px 0 0;
   }
@@ -374,7 +373,7 @@ nav {
   }
 }
 
-#my-work {
+#my-work, #other {
   width: 100%;
   background: $dark-purple;
   border-bottom: 1px solid $light-purple;
@@ -459,7 +458,7 @@ nav {
       }
     }
 
-    * > img {
+    img {
       border-radius: 15px 15px 0 0;
       border-bottom: solid 1px $light-purple;
     }
@@ -517,17 +516,12 @@ nav {
   }
 }
 
-// ########## Old styles ##########
+footer {
+  text-align: center;
+  border-top: solid 1px $light-purple;
+}
+
 .modal {
   display: none; //Remove modal for now
   height: 90vh;
-}
-
-
-#me-picture {
-  box-shadow: 0 0 15px var(--bs-light-purple);
-}
-
-.limiter {
-  max-width: $maxSize;
 }
