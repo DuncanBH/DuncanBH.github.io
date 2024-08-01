@@ -307,6 +307,33 @@ nav {
   }
 }
 
+.button {
+  position: relative;
+  color: $dark;
+  background-color: $offwhite;
+  border: solid 2px $dark-purple;
+  border-radius: 1rem;
+  padding: 6px 12px;
+  cursor: pointer;
+
+  &.play-button {
+    color: $dark;
+    background-color: $yellow;
+
+    &:hover {
+      background: rgba($yellow, 0.9);
+    }
+  }
+
+  &.other-button {
+    background-color: $offwhite;
+
+    &:hover {
+      background: rgba($offwhite, 0.8);
+    }
+  }
+}
+
 .about-me-content {
   max-width: $maxSize;
   padding: 20px;
@@ -429,33 +456,6 @@ nav {
       align-items: center;
       justify-content: center;
       gap: 1rem;
-
-      a {
-        position: relative;
-        color: $dark;
-        background-color: $offwhite;
-        border: solid 2px $dark-purple;
-        border-radius: 1rem;
-        padding: 6px 12px;
-        cursor: pointer;
-
-        &.play-button {
-          color: $dark;
-          background-color: $yellow;
-
-          &:hover {
-            background: rgba($yellow, 0.9);
-          }
-        }
-
-        &.other-button {
-          background-color: $offwhite;
-
-          &:hover {
-            background: rgba($offwhite, 0.8);
-          }
-        }
-      }
     }
 
     img {
@@ -521,7 +521,79 @@ footer {
   border-top: solid 1px $light-purple;
 }
 
-.modal {
-  display: none; //Remove modal for now
-  height: 90vh;
+#resumeModal {
+  margin: auto;
+  padding: 0;
+  min-width: 80%;
+
+  border-radius: 15px;
+  border: 2px solid $light-purple;
+
+  color: $offwhite;
+  background: $dark-purple;
+
+  overscroll-behavior: none;
+
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+
+  .modal-contents {
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 0 1rem;
+
+      h1 {
+        display: inline;
+      }
+
+      button {
+        margin: 0;
+        padding: 0;
+        height: min-content;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+        fill: $background;
+
+        transition: fill 0.2s ease-in-out;
+
+        &:hover {
+          fill: $light-purple;
+        }
+
+      }
+    }
+
+    iframe {
+      border: none;
+      max-height: 80vh;
+      min-width: 100%;
+    }
+
+    .modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  iframe {
+    width: 50vw;
+    height: 75vw;
+  }
+}
+
+::backdrop {
+  background-image: linear-gradient(rgba($dark, 0.5), rgba($dark, 0.85));
 }

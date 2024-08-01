@@ -20,7 +20,6 @@
 
 
     <link rel="stylesheet" href="./scss/anim.css">
-    <script defer src="scripts/anim.js"></script>
     <link rel="icon" href="/favicon-32x32.png" sizes="any"><!-- 32×32 -->
 
     <!-- Font (Roboto) -->
@@ -69,29 +68,32 @@
 </div>
 
 <!-- Resume modal -->
-<div class="modal modal-lg fade" id="resumeModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content bg-dark-purple">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="resumeModalLabel">Resume</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+<dialog id="resumeModal">
+    <div class="modal-contents">
+        <div class="modal-header">
+            <h1>Resume</h1>
+            <button type="button">
+                <svg height="35px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+            </button>
+        </div>
 
-            <div class="modal-body" style="height: 72vh">
-                <iframe src="documents/DuncanBruensHomeWebResume.pdf" type="application/pdf" width="100%"
-                        height="100%"></iframe>
-            </div>
+        <iframe src="documents/DuncanBruensHomeWebResume.pdf" type="application/pdf" width="100%"
+                height="100%"></iframe>
 
-            <div class="modal-footer">
-                <a class="btn btn-primary rounded-pill" href="./documents/DuncanBruensHomeWebResume.pdf" target="_blank"
-                   rel="noopener noreferrer">
-                    Download
-                </a>
-                <button type="button" class="btn btn-success rounded-pill" data-bs-dismiss="modal">Close</button>
-            </div>
+        <div class="modal-footer">
+            <a class="button play-button" href="./documents/DuncanBruensHomeWebResume.pdf" target="_blank"
+               rel="noopener noreferrer">
+                Download
+            </a>
+            <button class="button other-button" type="button" autofocus>
+                Close
+            </button>
         </div>
     </div>
-</div>
+</dialog>
 
 <div id="main"></div>
 <nav>
@@ -148,15 +150,12 @@
             </span>
         </a>
 
-        <!-- Button trigger resume modal -->
-        <button type="button" class="resumeModalButton"
-                data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <button type="button" class="resumeModalButton" id="openResumeButton">
             View Resume
         </button>
     </div>
 
     <!-- Hamburger menu button -->
-    <!--    <div style="flex-grow: 1" class="showWhenCollapsed"></div>-->
     <button class="collapseButton showWhenCollapseSizeMedium" type="button" aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation" id="collapseButton"
@@ -284,7 +283,8 @@
                     their vue.js product.
                 </p>
                 <div class="card-buttons">
-                    <a class="play-button" href="https://en.zelexio.com/" target="_blank" rel="noopener noreferrer">
+                    <a class="button play-button" href="https://en.zelexio.com/" target="_blank"
+                       rel="noopener noreferrer">
                         Explore
                     </a>
                 </div>
@@ -314,7 +314,7 @@
                     and additional art once again by the ever-talented <i>MrHayami</i>.
                 </p>
                 <div class="card-buttons">
-                    <a class="play-button" href="https://frunnkis.itch.io/sneaky-cleanup" target="_blank"
+                    <a class="button play-button" href="https://frunnkis.itch.io/sneaky-cleanup" target="_blank"
                        rel="noopener noreferrer">
                         Explore
                     </a>
@@ -337,7 +337,7 @@
                     outside help save for my friend and talented animator, <i>MrHayami</i>.
                 </p>
                 <div class="card-buttons">
-                    <a class="play-button" href="https://frunnkis.itch.io/ruins-of-dice" target="_blank"
+                    <a class="button play-button" href="https://frunnkis.itch.io/ruins-of-dice" target="_blank"
                        rel="noopener noreferrer">
                         Play Now!
                     </a>
@@ -363,7 +363,8 @@
                     main composer Nicolas Robert and artist <i>MrHayami</i>.
                 </p>
                 <div class="card-buttons">
-                    <a class="other-button" href="https://github.com/DuncanBH/FinalPlatformerProject" target="_blank"
+                    <a class="button other-button" href="https://github.com/DuncanBH/FinalPlatformerProject"
+                       target="_blank"
                        rel="noopener noreferrer">
                         GitHub
                     </a>
@@ -388,11 +389,11 @@
                     sharing application with a custom recommendations system.
                 </p>
                 <div class="card-buttons">
-                    <a class="play-button" href="https://okkoro.vercel.app/" target="_blank"
+                    <a class="button play-button" href="https://okkoro.vercel.app/" target="_blank"
                        rel="noopener noreferrer">
                         Explore
                     </a>
-                    <a class="other-button" href="https://github.com/okkoro/okkoro"
+                    <a class="button other-button" href="https://github.com/okkoro/okkoro"
                        target="_blank" rel="noopener noreferrer">
                         GitHub
                     </a>
@@ -416,7 +417,8 @@
                     development work.
                 </p>
                 <div class="card-buttons">
-                    <a class="other-button" href="https://github.com/istiaque-champ/champ_petclinic" target="_blank"
+                    <a class="button other-button" href="https://github.com/istiaque-champ/champ_petclinic"
+                       target="_blank"
                        rel="noopener noreferrer">
                         GitHub
                     </a>
@@ -486,8 +488,6 @@
         </div>
     </div>
 </div>
-
-</div>
 </body>
 
 <footer>
@@ -505,5 +505,6 @@
     let year = d.getFullYear();
     document.getElementById("year").innerHTML = year;
 </script>
+<script defer src="scripts/modal.js"></script>
 <script defer src="scripts/collapser.js"></script>
 </html>
