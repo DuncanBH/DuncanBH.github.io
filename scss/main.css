@@ -335,6 +335,10 @@ nav .collapseButton:hover {
   }
 }
 
+.chip-container {
+  display: flex;
+  flex-direction: column;
+}
 .chip-container h3 {
   margin: -16px -16px 0 -16px;
   padding: 10px;
@@ -342,8 +346,11 @@ nav .collapseButton:hover {
   border: 1px solid #9a87b4;
   border-radius: 15px 15px 0 0;
 }
+.chip-container h4 {
+  padding: 1rem 0 0.25rem;
+}
 .chip-container ul {
-  padding: 1rem 0 0;
+  padding: 0;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;

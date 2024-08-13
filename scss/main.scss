@@ -382,6 +382,9 @@ nav {
 }
 
 .chip-container {
+  display: flex;
+  flex-direction: column;
+
   h3 {
     margin: -16px -16px 0 -16px;
     padding: 10px;
@@ -391,8 +394,12 @@ nav {
     border-radius: 15px 15px 0 0;
   }
 
+  h4 {
+    padding: 1rem 0 0.25rem;
+  }
+
   ul {
-    padding: 1rem 0 0;
+    padding: 0;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
