@@ -37,6 +37,7 @@ a {
   text-decoration: none;
 }
 
+/* Universal Styles */
 body {
   background-color: #483a55;
   color: #e0dae1;
@@ -47,8 +48,15 @@ body {
   font-style: normal;
 }
 
-.bg-dark-purple {
-  background: #7a5993;
+.link {
+  color: #e0dae1;
+  transition: color ease-in-out 0.15s;
+}
+.link:hover {
+  color: rgba(224, 218, 225, 0.75);
+}
+.link.underline {
+  text-decoration: underline;
 }
 
 /* Landing */
@@ -141,9 +149,6 @@ nav {
     grid-template-rows: 56px min-content;
     grid-template-areas: "name button" "content content";
   }
-}
-nav a {
-  color: #e0dae1;
 }
 nav .navbar-name {
   font-size: 1.3em;
@@ -318,12 +323,22 @@ nav .collapseButton:hover {
 .about-me-content .content-box:first-of-type {
   background: #7a5993;
 }
+.about-me-content .content-box:first-of-type h3 {
+  font-weight: normal;
+}
+.about-me-content .content-box:first-of-type p, .about-me-content .content-box:first-of-type ul {
+  padding-bottom: 1rem;
+}
 @media screen and (min-width: 1440px) {
   .about-me-content .content-img {
     grid-row: span 3;
   }
 }
 
+.chip-container {
+  display: flex;
+  flex-direction: column;
+}
 .chip-container h3 {
   margin: -16px -16px 0 -16px;
   padding: 10px;
@@ -331,8 +346,11 @@ nav .collapseButton:hover {
   border: 1px solid #9a87b4;
   border-radius: 15px 15px 0 0;
 }
+.chip-container h4 {
+  padding: 1rem 0 0.25rem;
+}
 .chip-container ul {
-  padding: 1rem 0 0;
+  padding: 0;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
