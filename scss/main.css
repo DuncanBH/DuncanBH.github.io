@@ -37,6 +37,7 @@ a {
   text-decoration: none;
 }
 
+/* Universal Styles */
 body {
   background-color: #483a55;
   color: #e0dae1;
@@ -47,8 +48,15 @@ body {
   font-style: normal;
 }
 
-.bg-dark-purple {
-  background: #7a5993;
+.link {
+  color: #e0dae1;
+  transition: color ease-in-out 0.15s;
+}
+.link:hover {
+  color: rgba(224, 218, 225, 0.75);
+}
+.link.underline {
+  text-decoration: underline;
 }
 
 /* Landing */
@@ -141,9 +149,6 @@ nav {
     grid-template-rows: 56px min-content;
     grid-template-areas: "name button" "content content";
   }
-}
-nav a {
-  color: #e0dae1;
 }
 nav .navbar-name {
   font-size: 1.3em;

@@ -1,7 +1,7 @@
 //Import needed parts
 @import "reset";
 
-//create custom styles
+//create custom controls
 $maxSize: 1440px;
 $collapseSizeMedium: 850px;
 $collapseSizeSmall: 450px;
@@ -29,7 +29,7 @@ $custom-colors: (
         "dark": $dark,
 );
 
-// ########## De-Bootstrapping ##########
+/* Universal Styles */
 body {
   background-color: $background;
   color: $offwhite;
@@ -42,8 +42,18 @@ body {
   font-style: normal;
 }
 
-.bg-dark-purple {
-  background: $dark-purple;
+.link {
+  color: $offwhite;
+
+  transition: color ease-in-out 0.15s;
+
+  &:hover {
+    color: rgba($offwhite, 0.75);
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
 }
 
 /* Landing */
@@ -157,10 +167,6 @@ nav {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba($dark-purple, 0.8);
-
-  a {
-    color: $offwhite;
-  }
 
   .navbar-name {
     font-size: 1.3em;
