@@ -318,6 +318,12 @@ nav .collapseButton:hover {
 .about-me-content .content-box:first-of-type {
   background: #7a5993;
 }
+.about-me-content .content-box:first-of-type h3 {
+  font-weight: normal;
+}
+.about-me-content .content-box:first-of-type p, .about-me-content .content-box:first-of-type ul {
+  padding-bottom: 1rem;
+}
 @media screen and (min-width: 1440px) {
   .about-me-content .content-img {
     grid-row: span 3;
